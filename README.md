@@ -1,7 +1,7 @@
 # EXPERIMENT--01-ALP-FOR-8086
-Name :
-Roll no 
-Date of experiment :
+### Name : Vinush.CV
+### Roll no :212222230176
+### Date of experiment : 
 
 
 
@@ -15,17 +15,11 @@ Running The Emulator (emu8086) Intro 8086 Microprocessor Emulator, also known as
 
  ## Running the Emulator :
 1.	Download and install emu8086 (www.emu8086.com) It is usually installed in C:\EMU8086 subfolder in the “Windows” directory
-2.	  Run  emu8086 icon (on the desktop or in the c:\EMU8086 folder of window) It has green color 
- 
- 
-3.		write the code for the appropriate program for ADDITION,SUBTRACTION, MULTIPLICATION,  DIVISION operations 
-
+2.	Run  emu8086 icon (on the desktop or in the c:\EMU8086 folder of window) It has green color 
+3.	write the code for the appropriate program for ADDITION,SUBTRACTION, MULTIPLICATION,  DIVISION operations
 4.	 Compile the program and check for the errors 
 5.	Run (once there is no syntax error) 
-
 6.	Click OK to see/view the output of your program on the Emulator screen. 
-
-
 7.	After running the program, another menu screen will be displayed, where you have the option to “View” symbol table,
 8.	 
 
@@ -38,24 +32,12 @@ Running The Emulator (emu8086) Intro 8086 Microprocessor Emulator, also known as
 
 
 
-
-
-
-
 9.	Click on emulate to start emulation 
 
 
 
 
-
-
-
-
 ![image](https://user-images.githubusercontent.com/36288975/189273273-9bb36ec1-e2e8-4892-8d35-37707332bfdc.png)
-
-
-
-
 
 
 
@@ -78,26 +60,59 @@ Running The Emulator (emu8086) Intro 8086 Microprocessor Emulator, also known as
 ## Programs for arithmetic  operations
 
 ## Addition  of 8 bit ALP 
-
-
-
+```
+org 100h
+mov al,024h;
+mov bl,al;
+add bl,al;
+mov [0123h],bl;
+ret
+```
 ## Output  
+
+![1](https://github.com/user-attachments/assets/887cbfab-e07c-4f1a-9b15-90d0edb7a698)
  
 ## Subtraction   of 8 bit numbers  ALP 
- 
-## Output  
+```
+org 100h
+mov al,024h;
+mov bl,[0123h+02];
+sub bl,al;
+mov [0123h+04],bl;
+ret
+``` 
+## Output
+![image](https://github.com/user-attachments/assets/4ba43cd0-9f58-427c-9ad1-1dfc9455c21a)
+
 ## Multiplication alp 
+```
+org 100h
+mov bx,0015h;
+mov al,[bx];
+mul bl;
+mov [0015h+04],al;
+ret
+```
  ## Output  
+![image](https://github.com/user-attachments/assets/cada91ca-f028-4013-81d1-7b3038c7a0e5)
 
 
 ## Division alp 
-
+```
+org 100h
+mov bx,0040h;
+mov al,[bx+02];
+div bl;
+mov [0040h+04],al;
+ret
+```
 ## Output  
+![image](https://github.com/user-attachments/assets/2c16ce33-f3d6-42d8-aad4-2f17a5486821)
 
 
 ## Result :
  
-
+Thus, ALP for fundamental arithmetic and logical operations are executed successfully.
 
 
 
